@@ -30,7 +30,7 @@ public class movement : MonoBehaviour
     {
         if (moving == true) agent.destination = checkpoints[checkpoint].position;
         else agent.destination = transform.position;
-        Debug.Log(moving);
+        //Debug.Log(moving);
 
         if (Input.GetKeyDown("space")) moving = true;
     }
@@ -38,7 +38,7 @@ public class movement : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         checkpoint++;
-        Debug.Log("colission");
+        //Debug.Log("colission");
         moving = false;
     }
 }
