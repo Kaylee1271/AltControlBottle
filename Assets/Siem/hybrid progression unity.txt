@@ -1,0 +1,40 @@
+unity verloop:
+
+-intro?
+makker ligt te slapen
+
+-Input: geschud
+boeken vallen
+makker schrikt wakker en staat op
+makker doet deurtje open en deurtje dicht
+uithuigen voor 1 moment
+makker gaat tanden poetsen idle animation
+
+-Input: boooooooooo
+Makker schrikt en rent weg +geluidje
+deurtje open en deurtje dicht
+makker hijgt uit en loopt naar n stoel
+makker gaat zitten en de krant lezen
+
+-Input: spookje
+een spook verschijnt en zegt boe
+makker schrikt, staat op en rent weg
+deurtje open en deurtje dicht
+makker hijgt uit
+makker gaat rondkijken/bang om zich heen kijken
+
+-Input draadje
+licht gaat uit
+makker schreeuwt en rent bang de voordeur uit
+
+-outro?
+
+OF
+
+-tijd is op
+makker schreeuwt en maakt spook bang
+
+
+
+EXTRA DINGEN???
+-code verschijnt

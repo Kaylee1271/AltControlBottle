@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 62
+  controlID: 60
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 61
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 23
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -435,22 +435,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Siem/sounds
+    - Assets/Siem
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Siem/sounds
+  - Assets/Siem
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Sieminator\Documents\HKU\jaar 2\hybrid\hybrid git\AltControlBottle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90fd0000
-    m_LastClickedID: 64912
-    m_ExpandedIDs: 00000000946e00001670000000ca9a3bffffff7f
+    m_SelectedIDs: 24680000
+    m_LastClickedID: 26660
+    m_ExpandedIDs: 00000000a866000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -478,7 +478,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000946e0000
+    m_ExpandedIDs: 00000000a8660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -608,9 +608,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8650000
-      m_LastClickedID: 26072
-      m_ExpandedIDs: 1cc0ffffe6c2ffff36fbffffb8650000cc650000f2650000fa65000006660000226600003266000034660000446600005a66000070660000806600008866000092660000a2660000e4660000f0660000f66600000c6700001c6700001e6700002e6700003667000038670000426700006267000096670000b0670000c6670000cc670000fe67000000680000086800000e680000246800005a680000606800006e680000706800007468000076680000826800008a6800009268000098680000b4680000be680000cc680000e2680000fa680000fc680000fe6800000a6900001c6900004269000046690000746900007a6900008e69000092690000b0690000ca690000ce690000da690000f66900000a6a00001e6a0000266a0000366a0000446a0000586a00006c6a0000706a0000786a00008a6a00008c6a0000a06a0000a26a0000bc6a0000d46a0000e46a0000f26a0000f66a0000fa6a0000fe6a00001e6b0000246b00003a6b0000486b0000586b0000686b0000786b00009c6b0000a46b0000bc6b0000c86b0000e06b0000e66b0000f26b0000f46b0000fa6b0000046c00000a6c0000106c00001e6c0000266c0000306c0000366c0000466c0000546c00005c6c0000626c00006e6c0000786c0000806c0000926c0000aa6c0000b26c0000ba6c0000c66c0000cc6c0000ce6c0000ec6c0000fe6c00001a6d0000246d0000286d0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.009621635, y: 0.8561526, z: -0.5170724, w: -0.016615892}
     speed: 2
-    m_Value: {x: -0.009618127, y: 0.8558404, z: -0.51688385, w: -0.016609833}
+    m_Value: {x: -0.009621635, y: 0.85615265, z: -0.5170724, w: -0.016615892}
   m_Size:
     m_Target: 7.501207
     speed: 2
