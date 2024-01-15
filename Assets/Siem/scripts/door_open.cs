@@ -6,6 +6,16 @@ public class door_open : MonoBehaviour
 {
     public Transform player;
     // Start is called before the first frame update
+    int rotation_time = 300;
+
+    public AudioSource scr_open;
+    public AudioSource scr_close;
+    public AudioClip clp_open;
+    public AudioClip clp_close;
+
+    bool playedsound_open;
+    bool playedsound_close;
+
     void Start()
     {
         
@@ -14,11 +24,15 @@ public class door_open : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.position, transform.position) < 1){
-            transform.Rotate(new Vector3(0, 0.5f, 0));
+        if (Vector3.Distance(player.position, transform.position) < 2){
+            if (rotation_time > 0)
+            {
+                transform.Rotate(new Vector3(0, 0.5f, 0));
+                rotation_time--;
+            }
         }
         if (transform.rotation.y > 0) {
-            if (Vector3.Distance(player.position, transform.position) > 3.5f){
+            if (Vector3.Distance(player.position, transform.position) > 2f){
                 transform.Rotate(new Vector3(0, -0.5f, 0));
             }
         }

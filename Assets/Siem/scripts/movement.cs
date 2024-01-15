@@ -37,8 +37,9 @@ public class movement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //Destroy(other.gameObject);
         checkpoint++;
         //Debug.Log("colission");
-        moving = false;
+        if (other.tag.Equals("Finish")) moving = false;
     }
 }
