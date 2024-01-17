@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class launch_book : MonoBehaviour
 {
+    public MeshRenderer mesh;
     bool has_launched = false;
     Rigidbody rb;
     public GameObject player;
@@ -19,6 +20,7 @@ public class launch_book : MonoBehaviour
         {
             if (has_launched == false)
             {
+                mesh.enabled = true;
                 has_launched = true;
                 rb.AddForce(new Vector3(100*(player.transform.position.x-transform.position.x), 0, 100*(player.transform.position.z - transform.position.z)));
             }
