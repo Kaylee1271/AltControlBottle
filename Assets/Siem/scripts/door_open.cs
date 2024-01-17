@@ -13,9 +13,6 @@ public class door_open : MonoBehaviour
     public AudioClip clp_open;
     public AudioClip clp_close;
 
-    bool playedsound_open;
-    bool playedsound_close;
-
     void Start()
     {
         
@@ -28,12 +25,16 @@ public class door_open : MonoBehaviour
             if (rotation_time > 0)
             {
                 transform.Rotate(new Vector3(0, 0.5f, 0));
+                if (rotation_time == 300) scr_open.PlayOneShot(clp_open);
                 rotation_time--;
+                
             }
         }
         if (transform.rotation.y > 0) {
             if (Vector3.Distance(player.position, transform.position) > 2f){
                 transform.Rotate(new Vector3(0, -0.5f, 0));
+                if (rotation_time == 0) scr_close.PlayOneShot(clp_close);
+                rotation_time = 300;
             }
         }
     }

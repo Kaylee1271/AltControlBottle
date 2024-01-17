@@ -6,40 +6,60 @@ public class movement : MonoBehaviour
 {
 
     bool moving = false;
+    float timer = 1;
     public Transform[] checkpoints;
-    private int checkpoint = 0;
+    public int checkpoint = 0;
     private UnityEngine.AI.NavMeshAgent agent;
+
+    public Animator animator;
 
     public AudioSource source;
     public AudioClip music;
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        animator.speed = 0;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         
     }
 
     void Awake()
     {
+        source.volume = 0.1f;
         source.PlayOneShot(music, 1);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (moving == true) agent.destination = checkpoints[checkpoint].position;
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("running"))
+        {
+            agent.destination = checkpoints[checkpoint].position;
+        }
         else agent.destination = transform.position;
-        //Debug.Log(moving);
+
 
         if (Input.GetKeyDown("space")) moving = true;
+
+        if (moving == true)
+        {
+
+            timer -= Time.deltaTime;
+        }
+        else timer = 1f;
+
+        if (timer < 0)
+        {
+            animator.speed = 1;
+            animator.SetBool("is_moving", true);
+        }
+        else animator.SetBool("is_moving", false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        //Destroy(other.gameObject);
         checkpoint++;
-        //Debug.Log("colission");
         if (other.tag.Equals("Finish")) moving = false;
     }
 }
