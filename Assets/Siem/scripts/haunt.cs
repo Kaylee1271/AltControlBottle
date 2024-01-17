@@ -8,29 +8,35 @@ public class haunt : MonoBehaviour
     float haunting = 0;
     public GameObject player;
     public Animator animator;
-    public GameObject mesh;
+    public MeshRenderer mesh;
+
+    public AudioSource source;
+    public AudioClip boe;
     // Start is called before the first frame update
     void Start()
     {
         animator.speed = 0;
-        mesh.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //mesh.enabled = false;
+
         if (player.GetComponent<movement>().checkpoint > 5)
         {
             if (!has_haunted && Input.GetKeyDown("space"))
             {
-                haunting = 6;
+                haunting = 8;
                 has_haunted = true;
-                animator.speed = 0.5f;
+                animator.speed = 0.4f;
+                source.Play();
             }
         }
         haunting -= Time.deltaTime;
 
-        if (haunting > 3 && haunting < 6) transform.Translate(new Vector3(-Time.deltaTime*2,0,0));
-        if (haunting > 0 && haunting < 3) transform.Translate(new Vector3( Time.deltaTime*2, 0, 0));
+        if (haunting > 5 && haunting < 8) transform.Translate(new Vector3(0,Time.deltaTime,0));
+        if (haunting > 0 && haunting < 3) transform.Translate(new Vector3(0, -Time.deltaTime, 0));
     }
 }

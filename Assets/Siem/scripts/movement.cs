@@ -15,6 +15,11 @@ public class movement : MonoBehaviour
 
     public AudioSource source;
     public AudioClip music;
+    public AudioSource scream;
+    public AudioSource wilhelm;
+    public AudioSource light;
+
+    bool has_screamed = false;
 
 
     void Start()
@@ -40,21 +45,35 @@ public class movement : MonoBehaviour
         else agent.destination = transform.position;
 
 
-        if (Input.GetKeyDown("space")) moving = true;
+        if (Input.GetKeyDown("space"))
+        {
+            moving = true;
+            if (checkpoint > 8) light.Play();
+        }
 
         if (moving == true)
         {
 
             timer -= Time.deltaTime;
         }
-        else timer = 1f;
+        else timer = 0.8f;
 
         if (timer < 0)
         {
             animator.speed = 1;
             animator.SetBool("is_moving", true);
+            if (!has_screamed)
+            {
+                if (checkpoint > 8) wilhelm.Play();
+                else scream.Play();
+            }
+            has_screamed = true;
         }
-        else animator.SetBool("is_moving", false);
+        else
+        {
+            animator.SetBool("is_moving", false);
+            has_screamed = false;
+        }
     }
 
     void OnTriggerEnter(Collider other)
